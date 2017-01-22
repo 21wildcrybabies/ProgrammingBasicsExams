@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Exam2._1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var fruit = double.Parse(Console.ReadLine());
+            var vegetables = double.Parse(Console.ReadLine());
+            var kgfruit = double.Parse(Console.ReadLine());
+            var kgvegetables = double.Parse(Console.ReadLine());
+
+            var rezultat1 = fruit * kgfruit;
+            var rezultat2 = vegetables * kgvegetables;
+            var pechalba = (rezultat1 + rezultat2)/ 1.94;
+
+            Console.WriteLine(rezultat1);
+            Console.WriteLine(rezultat2);
+            Console.WriteLine(pechalba);           
+               
+                }
+    }
+}

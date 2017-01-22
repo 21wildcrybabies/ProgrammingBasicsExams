@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace exam_3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var N = double.Parse(Console.ReadLine());
+            var W = double.Parse(Console.ReadLine());
+            var L = double.Parse(Console.ReadLine());
+            var M = double.Parse(Console.ReadLine());
+            var O = double.Parse(Console.ReadLine());
+
+            var obshtaplosht = N * N;
+            var ploshtpeika = M * O;
+            var ploshtpokrivane = obshtaplosht - ploshtpeika;
+            var ploshtplochki = W * L;
+            var neobhodimiplochki = ploshtpokrivane / ploshtplochki;
+            var neobhodimovreme = neobhodimiplochki * 0.2;
+
+            Console.WriteLine(neobhodimiplochki);
+            Console.WriteLine(neobhodimovreme);
+            
+           
+
+        }
+    }
+}
