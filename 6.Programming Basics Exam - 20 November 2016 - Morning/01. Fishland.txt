@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _01.Fishland
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var Skumriqcena= double.Parse(Console.ReadLine());
+            var CacaPrice = double.Parse(Console.ReadLine());
+            var PalamudKg = double.Parse(Console.ReadLine());
+            var SafridKg = double.Parse(Console.ReadLine());
+            var midiKg = double.Parse(Console.ReadLine());
+
+            var PalamudPrice = Skumriqcena + Skumriqcena * 0.60;
+            var PalamudSum = PalamudPrice * PalamudKg;
+            var SafridPrice = CacaPrice + CacaPrice * 0.80;
+            var SafridSum = SafridPrice * SafridKg;
+            var midi = midiKg * 7.50;
+
+
+            var sum = PalamudSum + SafridSum + midi ;
+            Console.WriteLine("{0:f2}", sum);
+        }
+    }
+}

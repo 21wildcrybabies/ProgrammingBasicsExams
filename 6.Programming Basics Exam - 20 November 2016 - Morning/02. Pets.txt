@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _02.Pets
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var days = int.Parse(Console.ReadLine());
+            var foodkg = int.Parse(Console.ReadLine());
+        
+
+            var foodDogKg = double.Parse(Console.ReadLine());
+            var foodCatKg = double.Parse(Console.ReadLine());
+            var foodTurtleKg = double.Parse(Console.ReadLine());
+
+            var needFoodDog = days * foodDogKg;
+            var needFoodCat = days * foodCatKg;
+            var needFoodTurtle =( days * foodTurtleKg )/ 1000;
+
+            var needfood = needFoodDog + needFoodCat + needFoodTurtle;
+            var enough = foodkg - needfood;
+            var difference = needfood - foodkg;
+
+            if (foodkg >= needfood)
+            {
+                
+                Console.WriteLine("{0} kilos of food left.", Math.Floor (enough));
+            }
+            else
+            {
+                
+                Console.WriteLine("{0} more kilos of food are needed.", Math.Ceiling(difference));
+            }
+
+        }
+    }
+}

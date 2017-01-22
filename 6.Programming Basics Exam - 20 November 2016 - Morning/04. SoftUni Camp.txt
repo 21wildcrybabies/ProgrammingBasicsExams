@@ -1,0 +1,59 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+ 
+namespace SoftUniCamp
+{
+    class SoftUniCamp
+    {
+        static void Main(string[] args)
+        {
+            int groups = int.Parse(Console.ReadLine()); 
+            int totalPeople = 0; 
+            double car = 0;       
+            double bus = 0;      
+            double smallBus = 0; 
+            double bigBus = 0;   
+            double train = 0;    
+ 
+            for (int i = 1; i <= groups; i++)
+            {
+                
+                int people = int.Parse(Console.ReadLine());
+               
+              
+                totalPeople += people;
+ 
+               
+                if (people > 0 && people <= 5)
+                {
+                    car += people; 
+                }
+                else if (people <= 12) 
+                {
+                    bus += people; 
+                }
+                else if (people <= 25)
+                {
+                    smallBus += people;
+                }
+                else if (people <= 40)
+                {
+                    bigBus += people;
+                }
+                else if (people >= 41)
+                {
+                    train += people;
+                }
+            }
+            
+            Console.WriteLine("{0:F2}%", car / totalPeople * 100);
+            Console.WriteLine("{0:F2}%", bus / totalPeople * 100);
+            Console.WriteLine("{0:F2}%", smallBus / totalPeople * 100);
+            Console.WriteLine("{0:F2}%", bigBus / totalPeople * 100);
+            Console.WriteLine("{0:F2}%", train / totalPeople * 100);
+        }
+    }
+}
